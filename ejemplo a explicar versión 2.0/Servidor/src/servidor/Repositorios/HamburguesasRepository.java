@@ -7,7 +7,9 @@ package servidor.Repositorios;
 
 import java.util.ArrayList;
 import servidor.DTO.HamburguesaDTO;
+import servidor.DTO.InformacionDTO;
 import servidor.DTO.UsuarioDTO;
+import servidor.servicios.Conexion_cliente_servidor;
 
 /**
  *
@@ -33,12 +35,42 @@ public class HamburguesasRepository implements HamburguesasRepositoryInt{
             System.out.println("Hamburguesa registrada: nombre: " +objHamburguesa.getNombre()+ ", tamanio: " + objHamburguesa.getTipo()+ ", cantidadIngredientesExtra. " +objHamburguesa.getCantidadIngredientesExtra() +", Costo: "+ objHamburguesa.getCosto() );
         }
         
+        //envio de la factura al servidor de facturas
+        boolean respuestaServidorFacturas = enviarFactura(misHamburguesas);
+        
+        
         return bandera;
+    }
+    
+    
+    
+    public boolean enviarFactura(ArrayList<HamburguesaDTO> listaHamburguesas){
+        
+        Conexion_cliente_servidor cliente = new Conexion_cliente_servidor();
+        
+        InformacionDTO informacion = new InformacionDTO();
+        
+        String dirIP = "localhost";
+        int puerto = 2021;
+        
+        try {
+            cliente.ServerConnection(dirIP,puerto);
+            
+            //una vez se conecte enviamos los datos al servidor de facturas con sockets
+            informacion = cliente.peticion_respuesta(misHamburguesas);
+            
+        } catch(Exception e){
+            System.out.println("\nError: "+e.getMessage());
+        }
+        
+        return true;
     }
 
     @Override
     public HamburguesaDTO consultarUsuario(String nombreHamburguesa) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+    
+    
     
 }

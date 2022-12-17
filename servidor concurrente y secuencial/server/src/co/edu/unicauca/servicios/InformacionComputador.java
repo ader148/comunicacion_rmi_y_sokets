@@ -10,7 +10,7 @@ public class InformacionComputador {
             Thread.sleep(5000);
         } catch (InterruptedException ex) {
         }
-        InformacionDTO informacion = new InformacionDTO();
+        InformacionDTO_old informacion = new InformacionDTO_old();
         GestorPeticion peticion = new GestorPeticion();
         informacion.setNombreUsuario(peticion.getNombreUsuario());
         informacion.setDirUsuario(peticion.getDirectorioInicioUsuario());

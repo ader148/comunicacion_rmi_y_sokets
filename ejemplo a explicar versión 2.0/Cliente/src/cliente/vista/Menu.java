@@ -140,13 +140,13 @@ public class Menu {
                     
                     int NumeroDeIngredientesExtra = 0;
                     String[] partes = ingredientesExtra.split(",");
-                    for (int i = 1; i < partes.length; i++) {
+                    for (int i = 0; i < partes.length; i++) {
                         NumeroDeIngredientesExtra ++;
                     }
                     
                     //para prueba
                     System.out.println("numero de ingredientes extra");
-                    System.out.println(NumeroDeIngredientesExtra+1);
+                    System.out.println(NumeroDeIngredientesExtra);
                     
                     
                     String nombrePersonalizadoHamburguesa;

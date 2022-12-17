@@ -22,9 +22,9 @@ public class VistaPrincipalCliente {
             option = reader.nextInt();
             switch(option){
                 case 1 : 
-                    System.out.println("Ingrese La direccion IP: ");
+                    System.out.println("Ingrese La direccion IP: ");  ///localhost
                     dirIP = reader.next();
-                    System.out.println("Ingrese el puerto: ");
+                    System.out.println("Ingrese el puerto: ");   //2021
                     puerto = reader.nextInt();
                     try {
                         cliente.ServerConnection(dirIP,puerto);

@@ -11,12 +11,14 @@ public class VistaDelServidor {
             String tipo="";
             int puerto=0;
             FabricaServidor fabrica = new FabricaServidor();
-            System.out.println("======== Seleccione el tipo de servidor ==========");
-            System.out.println("Digite el tipo de servidor que desea utilizar");
-            System.out.println("\nsecuencial \t concurrente");
-            tipo = objScanner.nextLine();
-            System.out.println("\nDigite el puerto de escucha: ");
-            puerto = objScanner.nextInt();
+            System.out.println("======== Seleccione el tipo de servidor ==========");  //concurrente
+            //System.out.println("Digite el tipo de servidor que desea utilizar");
+            //System.out.println("\nsecuencial \t concurrente");
+            //tipo = objScanner.nextLine();
+            tipo = "concurrente";
+            //System.out.println("\nDigite el puerto de escucha: ");  //2021
+            //puerto = objScanner.nextInt();
+            puerto = 2021;
             PlantillaServidor objServidor = fabrica.obtenerTipoServidor(tipo);
             objServidor.inicializarServidor(puerto);
             objServidor.ejecutarServidor();

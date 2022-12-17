@@ -24,15 +24,24 @@ public class GestorDeHilo extends Thread{
             flujoEntrada=new DataInputStream(objSocketCliente.getInputStream());
             flujoSalida=new DataOutputStream(objSocketCliente.getOutputStream());
                 message = flujoEntrada.readUTF();//se bloquea el servidor
-                if(message.equals("caracteristicas")){
+                
+                //esto es lo que recibi desde el servidor central
+                //se espera que reciba la factura como tal 
+                System.out.println("estos es lo que recibio del servidor de facturas");
+                System.out.println(message);
+                
+                /*if(message.equals("caracteristicas")){
                     message = InformacionComputador.atenderPeticion();
                     flujoSalida.writeUTF(message);
-                }
+                }*/
             
-            message = InformacionComputador.atenderPeticion();                  
-            if(message.equals("caracteristicas")){
-                     flujoSalida.writeUTF(message);
-            } 
+                //message = InformacionComputador.atenderPeticion();                  
+                /*if(message.equals("caracteristicas")){
+                         flujoSalida.writeUTF(message);
+                }*/
+                
+                flujoSalida.writeUTF("se recibio la factura");
+            
             objSocketCliente.close();
         } catch (IOException ex) {
             ex.printStackTrace();
