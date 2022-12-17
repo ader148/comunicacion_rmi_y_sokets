@@ -4,13 +4,15 @@ import cliente.utilidades.UtilidadesConsola;
 import java.rmi.RemoteException;
 import servidor.DTO.UsuarioDTO;
 import servidor.DTO.HamburguesaDTO;
-import servidor.controladores.ControladorGestorUsuariosInt;
+//import servidor.controladores.ControladorGestorUsuariosInt;
+import servidor.controladores.ControladorGestorHamburguesaInt;
 
 public class Menu {
     
-    private final ControladorGestorUsuariosInt objRemoto;
+    //private final ControladorGestorUsuariosInt objRemoto;
+    private final ControladorGestorHamburguesaInt objRemoto;
     
-    public Menu(ControladorGestorUsuariosInt objRemoto)
+    public Menu(ControladorGestorHamburguesaInt objRemoto)
     {
         this.objRemoto=objRemoto;
     }
@@ -56,8 +58,8 @@ public class Menu {
 
     private void Opcion1() 
     {
-        //try
-        //{
+        try
+        {
                /*System.out.println("==Registro del Cliente==");
                 System.out.println("Ingrese la identificacion");
                 int id = UtilidadesConsola.leerEntero();
@@ -173,27 +175,29 @@ public class Menu {
                     //sumamos el valor de los ingredientes extra 
                     valorHamburguesa += NumeroDeIngredientesExtra * 1000;
                     
-                    HamburguesaDTO objHamburguesaDTO = new HamburguesaDTO(nombrePersonalizadoHamburguesa,tamanioHamburguesa,NumeroDeIngredientesExtra,valorHamburguesa); 
+                    HamburguesaDTO objHamburguesa = new HamburguesaDTO(nombrePersonalizadoHamburguesa,tamanioHamburguesa,NumeroDeIngredientesExtra,valorHamburguesa); 
                     
-                    boolean valor = objRemoto.registrarUsuario(objUsuario); //invocación del método remoto
+                    //boolean valor = objRemoto.registrarUsuario(objUsuario); //invocación del método remoto
+                    boolean valor = objRemoto.registrarHamburguesa(objHamburguesa); //invocación del método remoto
+                    
                     if(valor)
                             System.out.println("Registro realizado satisfactoriamente...");
                     else
                             System.out.println("no se pudo realizar el registro...");
             
                     
-        //}
-        //catch(RemoteException e)
-        //{
-        //        System.out.println("La operacion no se pudo completar, intente nuevamente...");
-        //}
+        }
+        catch(RemoteException e)
+        {
+            System.out.println("La operacion no se pudo completar, intente nuevamente...");
+        }
     }
 
 
 
     private void Opcion2()
     {	
-            try
+            /*try
             {
                     System.out.println("==Numero de usuarios==");
                     int tamanio  = objRemoto.consultarCantidadUsuarios();
@@ -203,12 +207,14 @@ public class Menu {
             {
                     System.out.println("La operación no se pudo completar, intente nuevamente...");
                     System.out.println("Excepcion generada: " + e.getMessage());
-            }	
+            }*/
+        
+            System.out.println("opcion 2 falta implementar");
     }
 
     private void Opcion3() 
     {
-        try
+        /*try
         {
             System.out.println("==Consulta de un Cliente==");
             System.out.println("Ingrese la identificacion");
@@ -226,6 +232,8 @@ public class Menu {
         catch(RemoteException e)
         {
                 System.out.println("La operacion no se pudo completar, intente nuevamente...");
-        }
+        }*/
+        
+        System.out.println("opcion 3 falta implementar");
     }
 }

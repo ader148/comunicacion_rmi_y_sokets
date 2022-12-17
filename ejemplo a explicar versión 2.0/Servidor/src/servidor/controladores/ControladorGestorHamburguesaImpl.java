@@ -8,21 +8,32 @@ package servidor.controladores;
 import java.rmi.RemoteException;
 import servidor.DTO.HamburguesaDTO;
 import java.rmi.server.UnicastRemoteObject;
+import servidor.Repositorios.HamburguesasRepositoryInt;
 
 /**
  *
  * @author alvarodanieleraso
  */
 public class ControladorGestorHamburguesaImpl extends UnicastRemoteObject implements ControladorGestorHamburguesaInt{
+    
+    private final HamburguesasRepositoryInt objHamburguesasRepository;
+    
 
+    public ControladorGestorHamburguesaImpl(HamburguesasRepositoryInt objHamburguesasRepository) throws RemoteException
+    {
+        super(); //se asigna un puerto de escucha al OR
+        this.objHamburguesasRepository=objHamburguesasRepository;   
+    }
+    
+    
     @Override
     public boolean registrarHamburguesa(HamburguesaDTO objHamburguesa) throws RemoteException {
-       return true;
+       return this.objHamburguesasRepository.registrarHamburguesa(objHamburguesa);
     }
 
     @Override
     public HamburguesaDTO consultarHamburguesaDTO(String nombreHamburguesa) throws RemoteException {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return this.objHamburguesasRepository.consultarUsuario(nombreHamburguesa);
     }
     
 }

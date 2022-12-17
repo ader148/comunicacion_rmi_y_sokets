@@ -9,8 +9,10 @@ package servidor.servicios;
 import servidor.utilidades.UtilidadesRegistroS;
 import servidor.utilidades.UtilidadesConsola;
 import java.rmi.RemoteException;
-import servidor.Repositorios.UsuariosRepository;
-import servidor.controladores.ControladorGestorUsuariosImpl;
+//import servidor.Repositorios.UsuariosRepository;
+import servidor.Repositorios.HamburguesasRepository;
+//import servidor.controladores.ControladorGestorUsuariosImpl;
+import servidor.controladores.ControladorGestorHamburguesaImpl;
 
 public class ServidorDeObjetos
 {
@@ -25,8 +27,11 @@ public class ServidorDeObjetos
         System.out.println("Cual es el número de puerto por el cual escucha el rmiRegistry ");
         numPuertoRMIRegistry = UtilidadesConsola.leerEntero(); 
      
-        UsuariosRepository objRepository = new UsuariosRepository();
-        ControladorGestorUsuariosImpl objRemoto = new ControladorGestorUsuariosImpl(objRepository);//se leasigna el puerto de escucha del objeto remoto
+        //UsuariosRepository objRepository = new UsuariosRepository();
+        HamburguesasRepository objRepository = new HamburguesasRepository();
+        
+        //ControladorGestorUsuariosImpl objRemoto = new ControladorGestorUsuariosImpl(objRepository);//se leasigna el puerto de escucha del objeto remoto
+        ControladorGestorHamburguesaImpl objRemoto = new ControladorGestorHamburguesaImpl(objRepository);//se leasigna el puerto de escucha del objeto remoto
         
         try
         {
