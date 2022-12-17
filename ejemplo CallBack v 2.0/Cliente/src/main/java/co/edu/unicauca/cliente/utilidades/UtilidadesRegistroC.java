@@ -23,6 +23,7 @@ public class UtilidadesRegistroC
         }
         catch (Exception e)
         {
+            System.out.println(e);
             System.out.println("Excepcion en obtencion del objeto remoto"+ e);
             return null;
         }

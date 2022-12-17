@@ -1,6 +1,10 @@
-G:\Mi unidad\i-2022\sistemas distribuidos\presentaciones\6. Callback y carga dinámica\ejemplo CallBack v 2.0\Cliente\src\main\java\co\edu\unicauca\cliente\utilidades\UtilidadesRegistroC.java
-G:\Mi unidad\i-2022\sistemas distribuidos\presentaciones\6. Callback y carga dinámica\ejemplo CallBack v 2.0\Cliente\src\main\java\co\edu\unicauca\cliente\utilidades\UtilidadesConsola.java
-G:\Mi unidad\i-2022\sistemas distribuidos\presentaciones\6. Callback y carga dinámica\ejemplo CallBack v 2.0\Cliente\src\main\java\co\edu\unicauca\servidor\controladores\ControladorServidorChatInt.java
-G:\Mi unidad\i-2022\sistemas distribuidos\presentaciones\6. Callback y carga dinámica\ejemplo CallBack v 2.0\Cliente\src\main\java\co\edu\unicauca\cliente\servicios\ClienteDeObjetos.java
-G:\Mi unidad\i-2022\sistemas distribuidos\presentaciones\6. Callback y carga dinámica\ejemplo CallBack v 2.0\Cliente\src\main\java\co\edu\unicauca\cliente\controladores\UsuarioCllbckInt.java
-G:\Mi unidad\i-2022\sistemas distribuidos\presentaciones\6. Callback y carga dinámica\ejemplo CallBack v 2.0\Cliente\src\main\java\co\edu\unicauca\cliente\controladores\UsuarioCllbckImpl.java
+/Users/alvarodanieleraso/Desktop/parcial_distribuidos teoria/ejemplo CallBack v 2.0/Cliente/src/main/java/co/edu/unicauca/DTO/HamburguesaDTO.java
+/Users/alvarodanieleraso/Desktop/parcial_distribuidos teoria/ejemplo CallBack v 2.0/Cliente/src/main/java/co/edu/unicauca/cliente/utilidades/UtilidadesConsola.java
+/Users/alvarodanieleraso/Desktop/parcial_distribuidos teoria/ejemplo CallBack v 2.0/Cliente/src/main/java/co/edu/unicauca/cliente/controladores/CocineroCallbckint.java
+/Users/alvarodanieleraso/Desktop/parcial_distribuidos teoria/ejemplo CallBack v 2.0/Cliente/src/main/java/co/edu/unicauca/cliente/servicios/ClienteDeObjetos.java
+/Users/alvarodanieleraso/Desktop/parcial_distribuidos teoria/ejemplo CallBack v 2.0/Cliente/src/main/java/co/edu/unicauca/servidor/controladores/ControladorServidorChatInt.java
+/Users/alvarodanieleraso/Desktop/parcial_distribuidos teoria/ejemplo CallBack v 2.0/Cliente/src/main/java/co/edu/unicauca/cliente/controladores/UsuarioCllbckImpl.java
+/Users/alvarodanieleraso/Desktop/parcial_distribuidos teoria/ejemplo CallBack v 2.0/Cliente/src/main/java/co/edu/unicauca/cliente/controladores/UsuarioCllbckInt.java
+/Users/alvarodanieleraso/Desktop/parcial_distribuidos teoria/ejemplo CallBack v 2.0/Cliente/src/main/java/co/edu/unicauca/servidor/controladores/ControladorServidorCocineroInt.java
+/Users/alvarodanieleraso/Desktop/parcial_distribuidos teoria/ejemplo CallBack v 2.0/Cliente/src/main/java/co/edu/unicauca/cliente/utilidades/UtilidadesRegistroC.java
+/Users/alvarodanieleraso/Desktop/parcial_distribuidos teoria/ejemplo CallBack v 2.0/Cliente/src/main/java/co/edu/unicauca/cliente/controladores/CocineroCallbckImpl.java
